@@ -17,7 +17,7 @@
 	$(".column").on("click", function (e) {
 		var col = $(e.currentTarget);
 		var slotsInCol = col.children();
-		var sound = new Audio("coin.wav");
+		var sound = new Audio("files/coin.wav");
 		sound.play();
 
 		for (var i = slotsInCol.length - 1; i >= 0; i--) {
@@ -37,26 +37,26 @@
 		console.log(board);
 		if (i == -1) {
 			console.log("NO MORE SPACE");
-			var sound2 = new Audio("denied.mp3");
+			var sound2 = new Audio("files/denied.mp3");
 			sound2.play();
 			return;
 		}
 		if (checkVictory()) {
 			console.log(currentPlayer + " won");
-			var sound3 = new Audio("victory.wav");
+			var sound3 = new Audio("files/victory.wav");
 			sound3.play();
 			message.textContent = currentPlayer + " won";
 
 			if (currentPlayer === "Xanny") {
 				var uno = $("p.uno");
-				$(".overlay").append("<img src=Malien.png class=alien>");
-				$("p.uno").append("<img src=Malien.png class=alien>");
+				$(".overlay").append("<img src=files/Malien.png class=alien>");
+				$("p.uno").append("<img src=files/Malien.png class=alien>");
 				localStorage.setItem("GREEN ALIEN WON", uno);
 			}
 			if (currentPlayer === "Nash") {
 				var due = $("p.due");
-				$(".overlay").append("<img src=Falien.png class=alien>");
-				$("p.due").append("<img src=Falien.png class=alien>");
+				$(".overlay").append("<img src=files/Falien.png class=alien>");
+				$("p.due").append("<img src=files/Falien.png class=alien>");
 				localStorage.setItem("PINK ALIEN WON", due);
 			}
 			$(".overlay").append().fadeIn(1500);
