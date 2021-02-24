@@ -99,7 +99,7 @@
 
 	function fillMatrix(rows, columns) {
 		for (var j = 0; j < rows.length; j++) {
-			for (var i = 0; i < columns.length; i++) {
+			for (var i = 0; i < columns.length + 1; i++) {
 				if (
 					columns.eq(j).hasClass("Xanny") &&
 					rows.eq(i).hasClass("Xanny") &&
