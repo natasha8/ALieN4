@@ -9,16 +9,14 @@ body {
 	font-family: monospace;
 }
 h1 {
-	font-size: 8rem;
+	font-size: 6rem;
 	color: deeppink;
-	grid-area: 1 / 2 / 2 / 3;
-	justify-self: center;
-	align-self: flex-start;
 	text-shadow: -5px 5px 0px yellow, -10px 10px 0px blue, -15px 15px 0px black;
 	margin: 0;
 }
 h3 {
-	font-size: 4rem;
+	align-items: center;
+	font-size: 2rem;
 	color: deeppink;
 	text-shadow: -5px 5px 0px yellow, -10px 10px 0px blue, -15px 15px 0px black;
 }
@@ -30,6 +28,7 @@ h4 {
 .game-container {
 	grid-area: 1 / 2 / 4 / 3;
 	justify-self: center;
+	justify-content: center;
 }
 
 #board {
@@ -117,9 +116,9 @@ p.due {
 }
 
 button {
-	border-radius: 45px;
-	border: 10px;
-	height: 22rem;
+	border-radius: 4rem;
+	border: 1rem solid yellow;
+	height: 12rem;
 	width: 15rem;
 	font-size: 40px;
 	font-weight: bold;
